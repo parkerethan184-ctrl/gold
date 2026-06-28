@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>گلدلند | گالری جواهرات و الماس کوچک زاده</title>
+    <meta name="description" content="گالری جواهرات و الماس گلدلند - کلکسیون لوکس‌ترین حلقه‌های برلیان، گردنبندهای زمرد و جواهرات سفارشی با مدیریت کوچک زاده. شعبه فرشته، تهران.">
+    <meta name="keywords" content="جواهرات لوکس، حلقه برلیان، گالری طلا، کوچک زاده، گلدلند، طلا فرشته، جواهرات تهران">
+    <meta property="og:title" content="گلدلند | گالری جواهرات و الماس">
+    <meta property="og:description" content="کلکسیون جدید جواهرات لوکس گلدلند با مدیریت کوچک زاده">
+    <meta property="og:type" content="website">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            DEFAULT: '#D4AF37',
+                            light: '#F3E5AB',
+                            dark: '#997a00',
+                            muted: '#bfa15f'
+                        },
+                        dark: {
+                            DEFAULT: '#050505',
+                            card: '#0c0c0c',
+                            card2: '#111111',
+                            border: '#1e1e1e',
+                            border2: '#2a2a2a'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Vazirmatn', 'sans-serif'],
+                        serif: ['Cinzel', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&family=Cinzel:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #050505;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        .font-serif-en { font-family: 'Cinzel', serif; }
+
+        ::selection {
+            background-color: #D4AF37;
+            color: #000;
+        }
+
+        /* ===== Navbar Glass ===== */
+        .glass-nav {
+            background: rgba(5, 5, 5, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+        }
+        .glass-nav.scrolled {
+            background: rgba(5, 5, 5, 0.95);
+            border-bottom-color: rgba(212, 175, 55, 0.35);
+            box-shadow: 0 10px 50px rgba(0,0,0,0.8);
+        }
+
+        /* ===== Gold Button ===== */
+        .btn-gold {
+            background: linear-gradient(135deg, #997a00 0%, #D4AF37 30%, #F3E5AB 50%, #D4AF37 70%, #997a00 100%);
+            background-size: 300% auto;
+            color: #050505;
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            font-weight: 700;
+        }
+        .btn-gold:hover {
+            background-position: right center;
+            box-shadow: 0 0 40px rgba(212, 175, 55, 0.5), 0 0 80px rgba(212, 175, 55, 0.15);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline-gold {
+            border: 1.5px solid rgba(212, 175, 55, 0.5);
+            color: #D4AF37;
+            background: transparent;
+            transition: all 0.4s ease;
+        }
+        .btn-outline-gold:hover {
+            background: #D4AF37;
+            color: #050505;
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
+        }
+
+        /* ===== Product Card ===== */
+        .product-card {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            z-index: 10;
+        }
+        .product-card:hover::before {
+            opacity: 1;
+        }
+        .product-card:hover {
+            transform: translateY(-12px);
+            border-color: rgba(212, 175, 55, 0.4);
+            box-shadow: 0 25px 50px -10px rgba(0,0,0,0.9), 0 0 30px rgba(212,175,55,0.08);
+        }
+        .product-card .cart-btn {
+            opacity: 0;
+            transform: translateY(15px);
+            transition: all 0.4s ease;
+        }
+        .product-card:hover .cart-btn {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ===== Animations ===== */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(40px);
+            animation: fadeInUp 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+        .delay-1 { animation-delay: 150ms; }
+        .delay-2 { animation-delay: 300ms; }
+        .delay-3 { animation-delay: 450ms; }
+        .delay-4 { animation-delay: 600ms; }
+
+        @keyframes fadeInUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slowZoom {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.12); }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(1deg); }
+        }
+
+        @keyframes shimmer {
+            0% { background-position: -200% center; }
+            100% { background-position: 200% center; }
+        }
+
+        @keyframes pulseGlow {
+            0% { opacity: 0.15; transform: scale(1); }
+            50% { opacity: 0.35; transform: scale(1.3); }
+            100% { opacity: 0.15; transform: scale(1); }
+        }
+
+        @keyframes rotateSlow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .glow-orb {
+            position: absolute;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(212,175,55,0.3) 0%, transparent 70%);
+            filter: blur(60px);
+            animation: pulseGlow 8s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        .text-shimmer {
+            background: linear-gradient(90deg, #997a00, #D4AF37, #F3E5AB, #D4AF37, #997a00);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shimmer 4s linear infinite;
+        }
+
+        /* ===== Scroll Reveal ===== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ===== Feature Card ===== */
+        .feature-card {
+            background: linear-gradient(145deg, #0c0c0c, #111111);
+            border: 1px solid #1e1e1e;
+            transition: all 0.5s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .feature-card::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(212,175,55,0.05) 0%, transparent 50%);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        .feature-card:hover {
+            border-color: rgba(212, 175, 55, 0.3);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+        }
+        .feature-card:hover::after {
+            opacity: 1;
+        }
+
+        /* ===== Testimonial ===== */
+        .testimonial-card {
+            background: linear-gradient(145deg, rgba(12,12,12,0.8), rgba(17,17,17,0.8));
+            backdrop-filter: blur(10px);
+            border: 1px solid #1e1e1e;
+            transition: all 0.4s ease;
+        }
+        .testimonial-card:hover {
+            border-color: rgba(212, 175, 55, 0.25);
+        }
+
+        /* ===== Divider ===== */
+        .gold-divider {
+            width: 80px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+        }
+
+        /* ===== Mobile Menu ===== */
+        .mobile-overlay {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transition: all 0.4s ease;
+        }
+        .mobile-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+            visibility: visible;
+        }
+        .mobile-drawer {
+            transform: translateX(-100%);
+            transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .mobile-drawer.active {
+            transform: translateX(0);
+        }
+
+        @media (min-width: 1024px) {
+            .mobile-overlay,
+            .mobile-drawer {
+                display: none !important;
+            }
+        }
+
+        /* ===== Scrollbar ===== */
+        ::-webkit-scrollbar { width: 5px; }
+        ::-webkit-scrollbar-track { background: #050505; }
+        ::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #997a00, #D4AF37); border-radius: 10px; }
+
+        /* ===== Price Tag ===== */
+        .price-tag {
+            display: inline-flex;
+            align-items: baseline;
+            gap: 4px;
+            direction: rtl;
+        }
+        .price-tag .amount {
+            font-weight: 800;
+            font-size: 0.95rem;
+            color: #D4AF37;
+            font-family: 'Vazirmatn', sans-serif;
+        }
+        .price-tag .currency {
+            font-weight: 400;
+            font-size: 0.7rem;
+            color: #bfa15f;
+        }
+        @media (min-width: 640px) {
+            .price-tag .amount {
+                font-size: 1.15rem;
+            }
+            .price-tag .currency {
+                font-size: 0.75rem;
+            }
+        }
+
+        /* ===== Rotating Diamond ===== */
+        .rotating-diamond {
+            animation: rotateSlow 20s linear infinite;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- ===== NAVBAR ===== -->
+    <nav id="main-nav" class="fixed w-full z-50 glass-nav transition-all duration-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20 md:h-24">
+
+                <!-- Right: Icons -->
+                <div class="flex items-center gap-4 md:gap-5 order-1">
+                    <button id="cart-btn" class="relative text-gray-400 hover:text-gold transition-colors duration-300 group" aria-label="سبد خرید">
+                        <i data-lucide="shopping-bag" class="w-5 h-5 md:w-6 md:h-6"></i>
+                        <span id="cart-count" class="absolute -top-2 -right-2 bg-gold text-black text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center transition-transform group-hover:scale-110">۰</span>
+                    </button>
+                    <button class="text-gray-400 hover:text-gold transition-colors duration-300 hidden md:block" aria-label="حساب کاربری">
+                        <i data-lucide="user" class="w-5 h-5 md:w-6 md:h-6"></i>
+                    </button>
+                    <button class="text-gray-400 hover:text-gold transition-colors duration-300" aria-label="جستجو">
+                        <i data-lucide="search" class="w-5 h-5 md:w-6 md:h-6"></i>
+                    </button>
+                </div>
+
+                <!-- Center: Logo -->
+                <div class="order-2 flex-1 flex justify-center">
+                    <a href="#" class="flex flex-col items-center relative z-10">
+                        <div class="font-serif-en text-2xl sm:text-3xl md:text-4xl font-bold tracking-[0.12em] text-shimmer leading-none">
+                            GOLDELAND
+                        </div>
+                        <span class="text-[9px] md:text-[11px] tracking-[0.15em] md:tracking-[0.2em] text-gold-muted mt-1 uppercase font-serif-en">Jewellery & Diamonds</span>
+                    </a>
+                </div>
+
+                <!-- Left: Desktop Menu -->
+                <div class="hidden lg:flex items-center gap-8 order-3">
+                    <a href="#products" class="text-gold font-medium text-sm border-b border-gold/50 pb-0.5 hover:border-gold transition-all">محصولات</a>
+                    <a href="#about" class="text-gray-400 hover:text-gold transition-colors text-sm">درباره ما</a>
+                    <a href="#testimonials" class="text-gray-400 hover:text-gold transition-colors text-sm">نظرات مشتریان</a>
+                    <a href="#contact" class="text-gray-400 hover:text-gold transition-colors text-sm">تماس</a>
+                </div>
+
+                <!-- Left: Mobile Hamburger -->
+                <div class="lg:hidden order-3">
+                    <button id="menu-open" class="text-gray-400 hover:text-gold transition-colors" aria-label="باز کردن منو">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== MOBILE MENU ===== -->
+    <div id="mobile-overlay" class="mobile-overlay fixed inset-0 bg-black/70 backdrop-blur-sm z-[60]"></div>
+    <div id="mobile-drawer" class="mobile-drawer fixed top-0 left-0 w-[85%] max-w-sm h-full bg-[#0a0a0a] z-[70] flex flex-col border-r border-gold/10">
+        <!-- Header -->
+        <div class="flex items-center justify-between p-6 border-b border-dark-border">
+            <span class="font-serif-en text-xl font-bold text-gold tracking-wider">GOLDELAND</span>
+            <button id="menu-close" class="text-gray-400 hover:text-gold transition-colors" aria-label="بستن منو">
+                <i data-lucide="x" class="w-7 h-7"></i>
+            </button>
+        </div>
+        <!-- Links -->
+        <div class="flex-1 flex flex-col gap-1 p-6">
+            <a href="#products" class="mobile-link flex items-center gap-4 py-4 text-lg text-white hover:text-gold border-b border-dark-border transition-colors">
+                <i data-lucide="gem" class="w-5 h-5 text-gold"></i>
+                گالری محصولات
+            </a>
+            <a href="#about" class="mobile-link flex items-center gap-4 py-4 text-lg text-white hover:text-gold border-b border-dark-border transition-colors">
+                <i data-lucide="user-circle" class="w-5 h-5 text-gold"></i>
+                درباره کوچک زاده
+            </a>
+            <a href="#testimonials" class="mobile-link flex items-center gap-4 py-4 text-lg text-white hover:text-gold border-b border-dark-border transition-colors">
+                <i data-lucide="message-circle" class="w-5 h-5 text-gold"></i>
+                نظرات مشتریان
+            </a>
+            <a href="#contact" class="mobile-link flex items-center gap-4 py-4 text-lg text-white hover:text-gold border-b border-dark-border transition-colors">
+                <i data-lucide="phone" class="w-5 h-5 text-gold"></i>
+                ارتباط با ما
+            </a>
+        </div>
+        <!-- Footer -->
+        <div class="p-6 border-t border-dark-border">
+            <div class="flex gap-4 justify-center">
+                <a href="#" class="w-10 h-10 border border-dark-border2 rounded-full flex items-center justify-center text-gray-500 hover:border-gold hover:text-gold transition-all">
+                    <i data-lucide="instagram" class="w-4 h-4"></i>
+                </a>
+                <a href="#" class="w-10 h-10 border border-dark-border2 rounded-full flex items-center justify-center text-gray-500 hover:border-gold hover:text-gold transition-all">
+                    <i data-lucide="send" class="w-4 h-4"></i>
+                </a>
+                <a href="#" class="w-10 h-10 border border-dark-border2 rounded-full flex items-center justify-center text-gray-500 hover:border-gold hover:text-gold transition-all">
+                    <i data-lucide="phone" class="w-4 h-4"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== HERO SECTION ===== -->
+    <header class="relative h-screen flex items-center justify-center overflow-hidden">
+        <!-- Background -->
+        <div class="absolute inset-0 z-0">
+            <img
+                src="https://images.unsplash.com/photo-1599643478514-4a42090d81c1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+                alt="Luxury Jewelry Background"
+                class="w-full h-full object-cover opacity-40"
+                style="animation: slowZoom 25s ease-in-out infinite alternate;"
+            >
+            <!-- Gradient overlays -->
+            <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/30 to-[#050505]"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-black/40"></div>
+        </div>
+
+        <!-- Glow Orbs -->
+        <div class="glow-orb w-72 h-72 top-[15%] left-[10%]" style="animation-delay: 0s;"></div>
+        <div class="glow-orb w-96 h-96 bottom-[20%] right-[5%]" style="animation-delay: 3s;"></div>
+        <div class="glow-orb w-48 h-48 top-[60%] left-[50%]" style="animation-delay: 5s;"></div>
+
+        <!-- Content -->
+        <div class="relative z-10 text-center px-4 max-w-5xl mx-auto">
+            <div class="fade-in-up">
+                <span class="inline-block font-serif-en text-xs md:text-sm tracking-[0.5em] text-gold/80 uppercase mb-6 border border-gold/20 px-6 py-2 rounded-full backdrop-blur-sm">The Art of Elegance</span>
+            </div>
+            <h1 class="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black text-white leading-[1.1] mb-8 fade-in-up delay-1">
+                تجلی <span class="text-shimmer">اصالت</span><br class="hidden sm:block"> در هر قطعه
+            </h1>
+            <p class="text-gray-300 text-base sm:text-lg md:text-xl mb-12 max-w-2xl mx-auto leading-relaxed fade-in-up delay-2 font-light">
+                کلکسیون انحصاری جواهرات گلدلند، با افتخار تحت نظارت و مدیریت
+                <strong class="text-gold font-semibold">کوچک زاده</strong>
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center fade-in-up delay-3">
+                <a href="#products" class="btn-gold px-10 py-4 rounded-full text-sm md:text-base inline-flex items-center justify-center gap-3 tracking-wide">
+                    مشاهده کالکشن جدید
+                    <i data-lucide="arrow-left" class="w-5 h-5"></i>
+                </a>
+                <a href="#about" class="btn-outline-gold px-10 py-4 rounded-full text-sm md:text-base inline-flex items-center justify-center gap-3 tracking-wide">
+                    درباره گلدلند
+                    <i data-lucide="info" class="w-4 h-4"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 fade-in-up delay-4">
+            <a href="#features" class="flex flex-col items-center gap-2 text-gold/50 hover:text-gold transition-colors group">
+                <span class="text-[10px] font-serif-en tracking-[0.3em] uppercase">Scroll</span>
+                <div class="w-5 h-8 border border-gold/30 rounded-full flex justify-center group-hover:border-gold/60 transition-colors">
+                    <div class="w-1 h-2 bg-gold rounded-full mt-1.5 animate-bounce"></div>
+                </div>
+            </a>
+        </div>
+    </header>
+
+    <!-- ===== FEATURES (ویژگی‌های برند) ===== -->
+    <section id="features" class="py-20 md:py-28 bg-dark relative overflow-hidden">
+        <div class="glow-orb w-64 h-64 -top-32 right-0" style="animation-delay: 2s;"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+
+                <div class="feature-card rounded-xl p-8 text-center reveal">
+                    <div class="w-16 h-16 mx-auto mb-5 rounded-full border border-gold/30 flex items-center justify-center text-gold">
+                        <i data-lucide="shield-check" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-white font-bold text-lg mb-2">ضمانت اصالت</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">تمامی محصولات دارای شناسنامه و تضمین عیار از مراجع معتبر</p>
+                </div>
+
+                <div class="feature-card rounded-xl p-8 text-center reveal">
+                    <div class="w-16 h-16 mx-auto mb-5 rounded-full border border-gold/30 flex items-center justify-center text-gold">
+                        <i data-lucide="diamond" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-white font-bold text-lg mb-2">سنگ‌های GIA</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">الماس‌ها و سنگ‌های قیمتی با شناسنامه GIA و IGI بین‌المللی</p>
+                </div>
+
+                <div class="feature-card rounded-xl p-8 text-center reveal">
+                    <div class="w-16 h-16 mx-auto mb-5 rounded-full border border-gold/30 flex items-center justify-center text-gold">
+                        <i data-lucide="pen-tool" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-white font-bold text-lg mb-2">طراحی سفارشی</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">امکان ساخت جواهرات منحصربه‌فرد مطابق با سلیقه شما</p>
+                </div>
+
+                <div class="feature-card rounded-xl p-8 text-center reveal">
+                    <div class="w-16 h-16 mx-auto mb-5 rounded-full border border-gold/30 flex items-center justify-center text-gold">
+                        <i data-lucide="truck" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-white font-bold text-lg mb-2">ارسال امن</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">بسته‌بندی لوکس و ارسال بیمه‌شده به سراسر ایران</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PRODUCTS ===== -->
+    <section id="products" class="py-20 md:py-28 bg-[#070707] relative overflow-hidden">
+        <div class="glow-orb w-80 h-80 -bottom-40 left-0" style="animation-delay: 1s;"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- Header -->
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-14 gap-4 reveal">
+                <div>
+                    <span class="font-serif-en text-xs tracking-[0.4em] text-gold/60 uppercase mb-3 block">New Arrivals</span>
+                    <h2 class="text-3xl md:text-5xl font-black text-white leading-tight">جدیدترین <span class="text-shimmer">شاهکارها</span></h2>
+                </div>
+                <a href="#" class="hidden md:inline-flex items-center gap-2 text-gold hover:text-gold-light transition-colors group text-sm border border-gold/30 px-5 py-2.5 rounded-full hover:border-gold/60">
+                    مشاهده همه
+                    <i data-lucide="arrow-left" class="w-4 h-4 transform group-hover:-translate-x-1 transition-transform"></i>
+                </a>
+            </div>
+
+            <!-- Separator -->
+            <div class="gold-divider mb-14 reveal"></div>
+
+            <!-- Grid -->
+            <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 md:gap-8">
+
+                <!-- Product 1 -->
+                <div class="product-card bg-dark-card border border-dark-border rounded-2xl group reveal">
+                    <div class="relative h-48 sm:h-72 md:h-80 overflow-hidden rounded-t-2xl bg-black">
+                        <img src="https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?auto=format&fit=crop&w=600&q=80" alt="حلقه برلیان" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-85 group-hover:opacity-100">
+                        <div class="absolute top-4 right-4 bg-gradient-to-r from-gold-dark to-gold text-black text-[11px] font-bold px-3 py-1 rounded-full">ویژه</div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                    </div>
+                    <div class="p-3 sm:p-5 md:p-6">
+                        <div class="text-gold-muted text-[11px] mb-2 font-serif-en tracking-[0.2em] uppercase">Engagement Rings</div>
+                        <h3 class="text-base md:text-lg font-bold text-white mb-1.5 line-clamp-1">حلقه سولیتر برلیان ۱.۵ قیراط</h3>
+                        <p class="text-gray-500 text-xs mb-5 line-clamp-1">طلای ۱۸ عیار سفید، الماس با شناسنامه GIA</p>
+                        <div class="flex justify-between items-center">
+                            <div class="price-tag">
+                                <span class="amount">۱۲۵,۰۰۰,۰۰۰</span>
+                                <span class="currency">تومان</span>
+                            </div>
+                            <button class="cart-btn w-10 h-10 bg-gold/10 hover:bg-gold text-gold hover:text-black rounded-full flex items-center justify-center transition-all duration-300 hover:shadow-[0_0_20px_rgba(212,175,55,0.3)]" aria-label="افزودن به سبد">
+                                <i data-lucide="plus" class="w-5 h-5"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card bg-dark-card border border-dark-border rounded-2xl group reveal">
+                    <div class="relative h-48 sm:h-72 md:h-80 overflow-hidden rounded-t-2xl bg-black">
+                        <img src="https://images.unsplash.com/photo-1599643477877-530eb83abc8e?auto=format&fit=crop&w=600&q=80" alt="گردنبند زمرد" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-85 group-hover:opacity-100">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                    </div>
+                    <div class="p-3 sm:p-5 md:p-6">
+                        <div class="text-gold-muted text-[11px] mb-2 font-serif-en tracking-[0.2em] uppercase">Necklaces</div>
+                        <h3 class="text-base md:text-lg font-bold text-white mb-1.5 line-clamp-1">گردنبند زمرد کلمبیا و برلیان</h3>
+                        <p class="text-gray-500 text-xs mb-5 line-clamp-1">طلای ۱۸ عیار زرد، زمرد اشکی خوش‌رنگ</p>
+                        <div class="flex justify-between items-center">
+                            <div class="price-tag">
+                                <span class="amount">۱۵۸,۰۰۰,۰۰۰</span>
+                                <span class="currency">تومان</span>
+                            </div>
+                            <button class="cart-btn w-10 h-10 bg-gold/10 hover:bg-gold text-gold hover:text-black rounded-full flex items-center justify-center transition-all duration-300 hover:shadow-[0_0_20px_rgba(212,175,55,0.3)]" aria-label="افزودن به سبد">
+                                <i data-lucide="plus" class="w-5 h-5"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card bg-dark-card border border-dark-border rounded-2xl group reveal">
+                    <div class="relative h-48 sm:h-72 md:h-80 overflow-hidden rounded-t-2xl bg-black">
+                        <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=600&q=80" alt="گوشواره مروارید" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-85 group-hover:opacity-100">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                    </div>
+                    <div class="p-3 sm:p-5 md:p-6">
+                        <div class="text-gold-muted text-[11px] mb-2 font-serif-en tracking-[0.2em] uppercase">Earrings</div>
+                        <h3 class="text-base md:text-lg font-bold text-white mb-1.5 line-clamp-1">گوشواره آویز الماس و مروارید</h3>
+                        <p class="text-gray-500 text-xs mb-5 line-clamp-1">مروارید پرورشی آب شور، طراحی کلاسیک</p>
+                        <div class="flex justify-between items-center">
+                            <div class="price-tag">
+                                <span class="amount">۶۸,۰۰۰,۰۰۰</span>
+                                <span class="currency">تومان</span>
+                            </div>
+                            <button class="cart-btn w-10 h-10 bg-gold/10 hover:bg-gold text-gold hover:text-black rounded-full flex items-center justify-center transition-all duration-300 hover:shadow-[0_0_20px_rgba(212,175,55,0.3)]" aria-label="افزودن به سبد">
+                                <i data-lucide="plus" class="w-5 h-5"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card bg-dark-card border border-dark-border rounded-2xl group reveal">
+                    <div class="relative h-48 sm:h-72 md:h-80 overflow-hidden rounded-t-2xl bg-black">
+                        <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=600&q=80" alt="دستبند تنیس" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-85 group-hover:opacity-100">
+                        <div class="absolute top-4 right-4 bg-red-600 text-white text-[11px] font-bold px-3 py-1 rounded-full">محدود</div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                    </div>
+                    <div class="p-3 sm:p-5 md:p-6">
+                        <div class="text-gold-muted text-[11px] mb-2 font-serif-en tracking-[0.2em] uppercase">Bracelets</div>
+                        <h3 class="text-base md:text-lg font-bold text-white mb-1.5 line-clamp-1">دستبند تنیس تمام برلیان</h3>
+                        <p class="text-gray-500 text-xs mb-5 line-clamp-1">۳ قیراط برلیان پاک (VVS)، طلای سفید</p>
+                        <div class="flex justify-between items-center">
+                            <div class="price-tag">
+                                <span class="amount">۱۹۵,۰۰۰,۰۰۰</span>
+                                <span class="currency">تومان</span>
+                            </div>
+                            <button class="cart-btn w-10 h-10 bg-gold/10 hover:bg-gold text-gold hover:text-black rounded-full flex items-center justify-center transition-all duration-300 hover:shadow-[0_0_20px_rgba(212,175,55,0.3)]" aria-label="افزودن به سبد">
+                                <i data-lucide="plus" class="w-5 h-5"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Mobile CTA -->
+            <div class="mt-12 text-center md:hidden reveal">
+                <a href="#" class="btn-outline-gold inline-flex items-center gap-2 px-8 py-3 rounded-full text-sm">
+                    مشاهده تمامی محصولات
+                    <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT / DESIGNER ===== -->
+    <section id="about" class="py-20 md:py-28 relative overflow-hidden bg-dark border-y border-dark-border">
+        <!-- BG Glow -->
+        <div class="glow-orb w-[500px] h-[500px] top-0 right-[-200px]" style="animation-delay: 2s;"></div>
+        <div class="glow-orb w-[400px] h-[400px] bottom-0 left-[-150px]" style="animation-delay: 4s;"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+
+                <!-- Image -->
+                <div class="relative reveal">
+                    <!-- Decorative frame -->
+                    <div class="absolute -inset-3 md:-inset-4 border border-gold/15 rounded-2xl pointer-events-none"></div>
+                    <div class="absolute -inset-6 md:-inset-8 border border-gold/5 rounded-3xl pointer-events-none"></div>
+
+                    <img src="https://images.unsplash.com/photo-1584302179602-e4c3d3fd629d?auto=format&fit=crop&w=800&q=80" alt="طراحی جواهرات گلدلند" class="relative z-10 w-full h-[400px] md:h-[550px] object-cover rounded-xl grayscale-[30%] hover:grayscale-0 transition-all duration-1000">
+
+                    <!-- Info badge -->
+                    <div class="absolute -bottom-6 -left-4 md:-bottom-8 md:-left-8 bg-[#0c0c0c] border border-gold/40 p-5 md:p-7 z-20 rounded-xl shadow-2xl">
+                        <div class="font-serif-en text-2xl md:text-3xl font-bold text-gold mb-0.5">GIA</div>
+                        <div class="text-[11px] text-gray-400 font-serif-en tracking-wider">Certified Gemologist</div>
+                    </div>
+
+                    <!-- Experience badge -->
+                    <div class="absolute top-4 left-4 md:top-6 md:left-6 bg-black/60 backdrop-blur-md border border-gold/20 px-4 py-2 rounded-full z-20">
+                        <span class="text-gold font-bold text-sm">+۱۵</span>
+                        <span class="text-gray-400 text-xs mr-1">سال تجربه</span>
+                    </div>
+                </div>
+
+                <!-- Text -->
+                <div class="reveal">
+                    <span class="font-serif-en text-xs tracking-[0.4em] text-gold/60 uppercase mb-4 block">About Goldeland</span>
+                    <h2 class="text-3xl md:text-5xl font-black text-white mb-6 leading-tight">
+                        هنر، دقت و<br><span class="text-shimmer">عشق به کمال</span>
+                    </h2>
+                    <div class="gold-divider mb-8"></div>
+                    <h3 class="text-lg md:text-xl text-gold font-semibold mb-6">با مدیریت و نظارت: کوچک زاده</h3>
+                    <p class="text-gray-300 text-base leading-[2] mb-6 text-justify">
+                        در گلدلند، ما جواهرات را تنها به عنوان زیورآلات نمی‌بینیم؛ بلکه هر قطعه یک اثر هنری است که داستانی از احساسات و اصالت را روایت می‌کند. تیم طراحی ما با بهره‌گیری از دانش روز گوهرشناسی و تلفیق آن با هنر دست استادکاران ایرانی، شاهکارهایی بی‌بدیل خلق می‌کنند.
+                    </p>
+                    <p class="text-gray-500 text-sm leading-[2] mb-10 text-justify">
+                        ما متعهد به استفاده از خالص‌ترین آلیاژهای طلا و انتخاب دقیق‌ترین سنگ‌های قیمتی دارای شناسنامه‌های معتبر بین‌المللی هستیم تا درخشش ابدی را به شما هدیه دهیم.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-gold/10 flex items-center justify-center text-gold flex-shrink-0">
+                                <i data-lucide="diamond" class="w-5 h-5"></i>
+                            </div>
+                            <span class="text-white text-sm">طراحی و ساخت سفارشی</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-gold/10 flex items-center justify-center text-gold flex-shrink-0">
+                                <i data-lucide="award" class="w-5 h-5"></i>
+                            </div>
+                            <span class="text-white text-sm">شناسنامه معتبر بین‌المللی</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-gold/10 flex items-center justify-center text-gold flex-shrink-0">
+                                <i data-lucide="sparkles" class="w-5 h-5"></i>
+                            </div>
+                            <span class="text-white text-sm">آلیاژ خالص ۱۸ و ۲۴ عیار</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-gold/10 flex items-center justify-center text-gold flex-shrink-0">
+                                <i data-lucide="refresh-cw" class="w-5 h-5"></i>
+                            </div>
+                            <span class="text-white text-sm">ضمانت تعویض و بازگشت</span>
+                        </div>
+                    </div>
+
+                    <a href="#contact" class="btn-gold inline-flex items-center gap-3 px-8 py-3.5 rounded-full text-sm tracking-wide">
+                        مشاوره رایگان
+                        <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS (نظرات مشتریان) ===== -->
+    <section id="testimonials" class="py-20 md:py-28 bg-[#070707] relative overflow-hidden">
+        <div class="glow-orb w-72 h-72 top-10 left-[20%]" style="animation-delay: 1s;"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- Header -->
+            <div class="text-center mb-16 reveal">
+                <span class="font-serif-en text-xs tracking-[0.4em] text-gold/60 uppercase mb-4 block">Testimonials</span>
+                <h2 class="text-3xl md:text-5xl font-black text-white mb-4">نظرات مشتریان <span class="text-shimmer">ما</span></h2>
+                <div class="gold-divider mx-auto"></div>
+            </div>
+
+            <!-- Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+
+                <div class="testimonial-card rounded-2xl p-7 md:p-8 reveal">
+                    <div class="flex items-center gap-1 mb-5">
+                        <i data-lucide="star" class="w-4 h-4 text-gold fill-gold"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-gold fill-gold"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-gold fill-gold"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-gold fill-gold"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-gold fill-gold"></i>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-[2] mb-6">حلقه نامزدی‌مون رو از گلدلند سفارشی ساختیم. واقعاً فوق‌العاده شد! آقای کوچک زاده شخصاً کمک کردن تا بهترین سنگ رو انتخاب کنیم. ممنون از صبر و حوصله‌شون.</p>
+                    <div class="flex items-center gap-3 border-t border-dark-border pt-5">
+                        <div class="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center">
+                            <span class="text-gold font-bold text-sm">ن.ر</span>
+                        </div>
+                        <div>
+                            <div class="text-white text-sm font-medium">نازنین رحیمی</div>
+                            <div class="text-gray-500 text-xs">خریدار حلقه سولیتر</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card rounded-2xl p-7 md:p-8 reveal">
+                    <div class="flex items-center gap-1 mb-5">
+                        <i data-lucide="star" class="w-4 h-4 text-gold fill-gold"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-gold fill-gold"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-gold fill-gold"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-gold fill-gold"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-gold fill-gold"></i>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-[2] mb-6">دستبند تنیس برلیانی که خریدم واقعاً بی‌نقصه. کیفیت سنگ‌ها و ساخت فوق‌العاده‌ست. بسته‌بندی هم خیلی لوکس و شیک بود. به همه دوستام گلدلند رو معرفی کردم.</p>
+                    <div class="flex items-center gap-3 border-t border-dark-border pt-5">
+                        <div class="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center">
+                            <span class="text-gold font-bold text-sm">م.ح</span>
+                        </div>
+                        <div>
+                            <div class="text-white text-sm font-medium">مریم حسینی</div>
+                            <div class="text-gray-500 text-xs">خریدار دستبند تنیس</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card rounded-2xl p-7 md:p-8 reveal">
+                    <div class="flex items-center gap-1 mb-5">
+                        <i data-lucide="star" class="w-4 h-4 text-gold fill-gold"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-gold fill-gold"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-gold fill-gold"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-gold fill-gold"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-gold fill-gold"></i>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-[2] mb-6">برای سالگرد ازدواجمون یه گردنبند زمرد از گلدلند خریدم. همسرم عاشقش شد! شناسنامه معتبر سنگ هم داشت که خیالمون راحت شد. قطعاً بازم خرید می‌کنیم.</p>
+                    <div class="flex items-center gap-3 border-t border-dark-border pt-5">
+                        <div class="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center">
+                            <span class="text-gold font-bold text-sm">ع.م</span>
+                        </div>
+                        <div>
+                            <div class="text-white text-sm font-medium">علی محمدی</div>
+                            <div class="text-gray-500 text-xs">خریدار گردنبند زمرد</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA Banner ===== -->
+    <section class="relative py-20 md:py-24 overflow-hidden border-y border-dark-border">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=1920&q=80" alt="Jewelry Close-up" class="w-full h-full object-cover opacity-20">
+            <div class="absolute inset-0 bg-gradient-to-r from-[#050505] via-[#050505]/80 to-[#050505]"></div>
+        </div>
+        <div class="glow-orb w-72 h-72 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
+
+        <div class="relative z-10 max-w-3xl mx-auto text-center px-4 reveal">
+            <h2 class="text-3xl md:text-5xl font-black text-white mb-6">جواهر رویاهایتان را <span class="text-shimmer">بسازید</span></h2>
+            <p class="text-gray-400 text-base md:text-lg leading-relaxed mb-10 max-w-xl mx-auto">
+                با تیم طراحی گلدلند، جواهرات منحصربه‌فرد و یکتای خود را سفارش دهید. از طرح اولیه تا ساخت نهایی، همراه شما هستیم.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#contact" class="btn-gold px-10 py-4 rounded-full text-sm inline-flex items-center justify-center gap-3 tracking-wide">
+                    درخواست مشاوره رایگان
+                    <i data-lucide="arrow-left" class="w-5 h-5"></i>
+                </a>
+                <a href="tel:+982188000000" class="btn-outline-gold px-10 py-4 rounded-full text-sm inline-flex items-center justify-center gap-3 tracking-wide" dir="ltr">
+                    <i data-lucide="phone" class="w-4 h-4"></i>
+                    ۰۲۱-۸۸XX XXXX
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer id="contact" class="bg-[#030303] pt-20 pb-8 relative overflow-hidden">
+        <div class="glow-orb w-64 h-64 bottom-0 right-0 opacity-50" style="animation-delay: 3s;"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-12 mb-16">
+
+                <!-- Brand -->
+                <div class="md:col-span-5">
+                    <a href="#" class="inline-flex flex-col items-start mb-6">
+                        <span class="font-serif-en text-2xl md:text-3xl font-bold tracking-widest text-shimmer">GOLDELAND</span>
+                        <span class="text-[10px] tracking-[0.15em] text-gray-600 mt-1.5 font-serif-en uppercase">Principal Jeweler & Gemologist</span>
+                    </a>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-8 max-w-sm">
+                        شعبه مرکزی و گالری اصلی گلدلند، محیطی لوکس و آرام برای انتخاب خاص‌ترین جواهرات زندگی شما.
+                    </p>
+
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3 text-gray-400 hover:text-gold transition-colors group">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-gold mt-1 flex-shrink-0"></i>
+                            <div>
+                                <strong class="block text-white text-sm mb-0.5">آدرس گالری:</strong>
+                                <span class="text-sm">تهران، خیابان فرشته، پلاک ۱۲</span>
+                            </div>
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-400 hover:text-gold transition-colors">
+                            <i data-lucide="phone" class="w-4 h-4 text-gold flex-shrink-0"></i>
+                            <span dir="ltr" class="font-serif-en text-sm">+98 21 88xx xxxx</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-400 hover:text-gold transition-colors">
+                            <i data-lucide="mail" class="w-4 h-4 text-gold flex-shrink-0"></i>
+                            <span class="font-serif-en text-sm">info@goldeland.ir</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-400 hover:text-gold transition-colors">
+                            <i data-lucide="clock" class="w-4 h-4 text-gold flex-shrink-0"></i>
+                            <span class="text-sm">شنبه تا پنجشنبه: ۱۰ صبح تا ۹ شب</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="md:col-span-3">
+                    <h4 class="text-white font-bold text-base mb-6">دسترسی سریع</h4>
+                    <div class="gold-divider mb-6"></div>
+                    <ul class="space-y-3">
+                        <li><a href="#products" class="text-gray-500 hover:text-gold transition-colors text-sm flex items-center gap-2 group"><span class="w-1 h-1 bg-gold/50 rounded-full group-hover:bg-gold transition-colors"></span>مجموعه جدید</a></li>
+                        <li><a href="#" class="text-gray-500 hover:text-gold transition-colors text-sm flex items-center gap-2 group"><span class="w-1 h-1 bg-gold/50 rounded-full group-hover:bg-gold transition-colors"></span>حلقه‌های نامزدی</a></li>
+                        <li><a href="#" class="text-gray-500 hover:text-gold transition-colors text-sm flex items-center gap-2 group"><span class="w-1 h-1 bg-gold/50 rounded-full group-hover:bg-gold transition-colors"></span>سفارش طراحی اختصاصی</a></li>
+                        <li><a href="#" class="text-gray-500 hover:text-gold transition-colors text-sm flex items-center gap-2 group"><span class="w-1 h-1 bg-gold/50 rounded-full group-hover:bg-gold transition-colors"></span>خدمات گوهرشناسی</a></li>
+                        <li><a href="#about" class="text-gray-500 hover:text-gold transition-colors text-sm flex items-center gap-2 group"><span class="w-1 h-1 bg-gold/50 rounded-full group-hover:bg-gold transition-colors"></span>درباره کوچک زاده</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="md:col-span-4">
+                    <h4 class="text-white font-bold text-base mb-6">عضویت در کلوپ مشتریان ویژه</h4>
+                    <div class="gold-divider mb-6"></div>
+                    <p class="text-gray-500 text-sm mb-5 leading-relaxed">
+                        برای دریافت دعوتنامه رویدادهای رونمایی از کالکشن‌های جدید، ایمیل خود را وارد کنید.
+                    </p>
+                    <form id="newsletter-form" class="flex mb-6 rounded-full overflow-hidden border border-dark-border2 focus-within:border-gold/50 transition-colors">
+                        <input type="email" placeholder="ایمیل شما..." class="bg-transparent text-white px-5 py-3 w-full focus:outline-none text-sm placeholder:text-gray-600">
+                        <button type="submit" class="bg-gold text-black px-6 py-3 font-bold hover:bg-gold-light transition-colors whitespace-nowrap text-sm flex-shrink-0">
+                            عضویت
+                        </button>
+                    </form>
+                    <!-- Toast -->
+                    <div id="toast" class="hidden bg-green-900/30 border border-green-700/30 text-green-400 text-xs px-4 py-2.5 rounded-lg mb-6">
+                        ✓ با موفقیت ثبت شد!
+                    </div>
+
+                    <div class="flex gap-3">
+                        <a href="#" class="w-11 h-11 border border-dark-border2 rounded-full flex items-center justify-center text-gray-500 hover:border-gold hover:text-gold hover:shadow-[0_0_15px_rgba(212,175,55,0.15)] transition-all" aria-label="اینستاگرام">
+                            <i data-lucide="instagram" class="w-4 h-4"></i>
+                        </a>
+                        <a href="#" class="w-11 h-11 border border-dark-border2 rounded-full flex items-center justify-center text-gray-500 hover:border-gold hover:text-gold hover:shadow-[0_0_15px_rgba(212,175,55,0.15)] transition-all" aria-label="تلگرام">
+                            <i data-lucide="send" class="w-4 h-4"></i>
+                        </a>
+                        <a href="#" class="w-11 h-11 border border-dark-border2 rounded-full flex items-center justify-center text-gray-500 hover:border-gold hover:text-gold hover:shadow-[0_0_15px_rgba(212,175,55,0.15)] transition-all" aria-label="واتساپ">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bottom -->
+            <div class="border-t border-dark-border pt-6 flex flex-col md:flex-row justify-between items-center gap-3 text-center">
+                <p class="text-gray-700 text-[11px] font-serif-en tracking-wider">
+                    © 2024 GOLDELAND JEWELRY. ALL RIGHTS RESERVED.
+                </p>
+                <div class="flex gap-3 text-gray-600 text-xs">
+                    <a href="#" class="hover:text-gold transition-colors">شرایط و قوانین</a>
+                    <span class="text-dark-border2">|</span>
+                    <a href="#" class="hover:text-gold transition-colors">حریم خصوصی</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script>
+        // Init Lucide icons
+        lucide.createIcons();
+
+        // ===== Mobile Menu =====
+        const menuOpen = document.getElementById('menu-open');
+        const menuClose = document.getElementById('menu-close');
+        const overlay = document.getElementById('mobile-overlay');
+        const drawer = document.getElementById('mobile-drawer');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        function openMenu() {
+            overlay.classList.add('active');
+            drawer.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeMenu() {
+            overlay.classList.remove('active');
+            drawer.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        menuOpen.addEventListener('click', openMenu);
+        menuClose.addEventListener('click', closeMenu);
+        overlay.addEventListener('click', closeMenu);
+        mobileLinks.forEach(link => link.addEventListener('click', closeMenu));
+
+        // ===== Navbar Scroll Effect =====
+        const nav = document.getElementById('main-nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 80) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // ===== Scroll Reveal =====
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add('visible');
+                    }, index * 80);
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // ===== Add to Cart =====
+        let cartCount = 0;
+        const cartCountEl = document.getElementById('cart-count');
+        const cartBtns = document.querySelectorAll('.cart-btn');
+
+        cartBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                cartCount++;
+                cartCountEl.textContent = toPersianNum(cartCount);
+                cartCountEl.classList.add('scale-125');
+                setTimeout(() => cartCountEl.classList.remove('scale-125'), 200);
+
+                // Quick visual feedback
+                btn.classList.add('!bg-green-600', '!text-white');
+                const icon = btn.querySelector('i');
+                if (icon) {
+                    icon.setAttribute('data-lucide', 'check');
+                    lucide.createIcons();
+                }
+                setTimeout(() => {
+                    btn.classList.remove('!bg-green-600', '!text-white');
+                    if (icon) {
+                        icon.setAttribute('data-lucide', 'plus');
+                        lucide.createIcons();
+                    }
+                }, 1200);
+            });
+        });
+
+        // ===== Newsletter Form =====
+        const form = document.getElementById('newsletter-form');
+        const toast = document.getElementById('toast');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const input = form.querySelector('input');
+            if (input.value.trim()) {
+                toast.classList.remove('hidden');
+                input.value = '';
+                setTimeout(() => toast.classList.add('hidden'), 3000);
+            }
+        });
+
+        // ===== Utility: Persian Numbers =====
+        function toPersianNum(num) {
+            const persianDigits = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
+            return num.toString().replace(/\d/g, d => persianDigits[d]);
+        }
+
+        // ===== Smooth Scroll =====
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
